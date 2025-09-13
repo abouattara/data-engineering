@@ -1,4 +1,6 @@
+from plyer import notification
 
+# telechargements_reussis boolean, use to noticed if dataset download successfully
 
 # Notification de fin
 notification.notify(
