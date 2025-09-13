@@ -43,6 +43,7 @@ def telecharger_fichier(url, destination, sheet_name=None):
         print(f"❌ Échec : {os.path.basename(destination)} — {e}")
         return False
 
+#===================== 3. Function to store data in data storage path ===========================
 # step1: Data extraction and  loading using telecharger_fichier() function (EL)
 telechargements_reussis = True
 i=1 # Delimitted phase 
@@ -65,7 +66,7 @@ for nom, url in datasets.items():
                 telechargements_reussis = False
      
 
-#===================== 3. Function to store data in data storage path ===========================
+
 # step2: Transform data first row to variable name code (T)
 data_finale = {}
 i=1 # Delimitted phase 
@@ -108,3 +109,4 @@ notification.notify(
     message="Tous les téléchargements ont réussi !" if telechargements_reussis else "Certains téléchargements ont échoué.",
     timeout=10
 )
+
